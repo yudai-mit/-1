@@ -1,0 +1,89 @@
+.mainhead{
+    color:white;
+    border: groove 5px;
+    
+}
+.leftblock{
+    position:relative;
+    width:480px;
+    height:300px;
+    float:left;
+}
+.f_logo2{
+    font-size: 24px;
+	color: white;
+	position: absolute;
+	top: 30px;
+	right: 25px;
+}
+.button{
+    position:relative;
+    width:300px;
+    height:300px;
+    color:antiquewhite;
+    float:left;
+}
+.background{
+    position:relative;
+    background-color:#333333;
+    width: 100%;
+    height:100px;
+    border-bottom:ridge 2px  #333333;
+    
+    float:left;
+
+}
+.left{
+    position:relative;
+    width:480px;
+    height:500px;
+    float: left;
+    color:#333333;
+    
+}
+.bodybackground1{
+    position:relative;
+    top:0px;
+    height:100px;
+    width:300px;
+    float: left;
+    background-color:#333333;
+    
+}
+
+
+
+body{
+    background-color: #333333;
+}
+
+title{
+    color:white;
+}
+.strurl{
+    height:2px;
+    text-align: center;
+
+}
+.btn_1 {
+	text-align: center;
+	clear: both;
+	padding: 10px;
+}
+.slide-items__wrap {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+.slide {
+    position: relative; /* 親要素にrelativeを指定 */
+}
+    
+.slide img {
+    position: absolute; /* absoluteで画像を重ねる */
+    display: none; /* 画像を非表示に非表示 */
+}
+.size1{
+    position: absolute;
+    
+}

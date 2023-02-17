@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static "/style1.css"%}">
+<div class="leftblock">
+</div>
+<div class="button">
+    {% if message is not None %}
+    <ul>
+        <li style="color:red">{{message}}</li>
+    {% endif %}
+    </ul>
+    <h1 class='mainhead'>加盟店共通商品券</h1>
+    <img src="{% static 'img/ticket.png'%}">
+    <form action="{% url 'home:ticket'%}" method="POST">
+        {%csrf_token%}
+        <p>1枚 1000ポイント</p>
+        <p>現在のポイント数:{{user.point}}</p>
+        <label for="quantity">枚数を入力してください: </label>
+        <input type="text" id="quantity" name="quantity" />
+        <br>
+        <button type="submit">交換する</button>
+    </form><br>
+    <p><a href={%url 'home:pointuse'%}>商品選択に戻る</a></p><br>
+</div>
+<div class="rightblock">
+</div>
+{% endblock %}

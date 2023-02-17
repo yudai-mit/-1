@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!--
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "/style1.css"%}">-->
+    <meta charset="UTF-8">
+    <title>Member's Point</title>
+</head>
+
+<header>
+    <center>
+        <h1>Member's Point</h1>
+    </center>
+<style>
+    header {
+        position: fixed;
+        color: white;
+        width: 100%;
+        height: 70px;
+        background-color: #444444;
+        }
+</style>
+</header>
+<br>
+<br>
+<br>
+
+<body>
+    <div>
+        <big>
+            <p align = center >会員{{user.username}}
+            <big> 
+            <big>  
+                <p align = center >現在の残りポイント数:<font color = blue>{{user.point}}</font></p>
+            </big>
+            </big>
+            <p align = center >交換が完了しました</font></p>
+            <p><a href="index2.html">トップページへ戻る</a></p>
+            <p><a href="pointuse.html">ポイントページへ戻る</a></p>
+        </big>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}アカウント登録{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static "/style1.css"%}">
+<div class="leftblock">
+</div>
+<div class="button">
+    <center>
+    <h1 class='mainhead'>アカウント登録</h1>
+    </center>
+    <form action="{% url 'home:signup' %}" method="POST">
+        {% csrf_token %}
+        <p>セキュリティが弱いパスワードはお控えください(例1234,abcdなど)</p>
+        {{ form.non_field_errors }}
+        {% for field in form %}
+            {{ field.label }}
+            <br>
+            {{ field }}
+            <br>
+            {{ field.error }}
+        {% endfor %}
+        <br>
+        <button type="submit">登録</button>
+    </form>
+</div>
+<div class="rightblock">
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "./search.html" %}
+{% block content %}
+    <h1>検索</h1>
+    {% if searchForm %}
+        <form action='{% url "home:shop2" %}' method="get">
+            <div>
+                {{searchForm}}
+                <input type="submit" value="検索">
+                <a href='{% url "home:shop2" %}'>クリア</a>
+            </div>
+        </form>
+    {% endif %}
+    {% for article in articles %}
+           
+            <!-- 4列分ユーザ情報を出力 -->
+        <p>
+            <a href='{% url "home:detail" article.id %}'>{{article.name}}</a><p>詳細：{{article.text}}</p>
+        </p>
+           
+           
+    {% endfor %}
+    <p><a href='{% url "home:shop2" %}'>一覧に戻る</a></p> 
+{% endblock %}

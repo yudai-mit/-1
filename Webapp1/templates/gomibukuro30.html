@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static "/style1.css"%}">
+<div class="leftblock">
+</div>
+<div class="button">
+    {% if message is not None %}
+    <ul>
+        <li style="color:red">{{message}}</li>
+    {% endif %}
+    </ul>
+    <center>
+    <h1 class='mainhead'>ごみ袋30L 10枚</h1>
+    <img src="{% static 'img/gomibukuro10.png'%}">
+    </center>
+    <form action="{% url 'home:gomibukuro30'%}" method="POST">
+        {%csrf_token%}
+        <p>1つ 900ポイント</p>
+        <p>現在のポイント数:{{user.point}}</p>
+        <label for="quantity">個数を入力してください: </label>
+        <input type="text" id="quantity" name="quantity" />
+        <br>
+        <button type="submit">交換する</button>
+    </form><br>
+    <p><a href={%url 'home:pointuse'%}>商品選択に戻る</a></p><br>
+</div>
+<div class="rightblock">
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+
+{% extends "./base2.html" %}
+
+    <h1>{{ article.id }}の個別投稿ページ</h1>
+    <p>{{ article.name }}</p><p>{{article.text}}</p>
+    <p><a href='{% url "home:shop" %}'>一覧ページへ戻る</a></p>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}ログイン{% endblock %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{%static "/style1.css"%}">
+<div class="leftblock">
+</div>
+<div class="button">
+    <center>
+    <h1 class='mainhead'>ログイン</h1>
+    </center>
+    <form action="{% url 'home:login'%}" method="POST">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {% for field in form %}
+            {{ field.label }}
+            <br>
+            {{ field }}
+            <br>
+            {{ field.error }}
+        {% endfor %}
+        <br>
+        <button type="submit">ログイン</button>
+    </form>
+    <p><a href={%url 'home:signup'%}>アカウント登録はこちら</a></p>
+</div>
+<div class="rightblock">
+</div>
+{% endblock %}

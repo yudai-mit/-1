@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "/style1.css"%}">
+    <link rel="stylesheet" typpe="text/css" href="{% static "/style.css"%}"> 
+<head>
+    <meta charset="utf-8">
+    <title>search</title>
+</head>
+<body>
+    <div id="base">
+        <!--head start-->
+        <div id="head">
+          <center>
+          <h1></h1>
+          </center>
+          <a href="index.html" title=<"不動産・店舗用HTMLテンプレート no.005　トップページへ"><!--{% load static %}<img src="{% static 'img/logo.gif'%}" alt="不動産・店舗用HTMLテンプレート no.005　ロゴ" id="logo" />--></a>
+          <center>
+          <div id="info">
+          
+          <strong id="info">室ナビ！</strong>
+          </div>
+          <div id="key">
+            
+          </div>
+          </center>
+           
+            <ul id="h_list">
+            <li><p>{{ user.username }}でログイン中です</p><br /></li>
+            </ul>
+          <div id="navi">
+            <ul id="jsnavi">
+                <li><a href="index2.html" class="toplevel">トップページ<br />
+                    <span>Home</span></a></li>
+              <li><a href="menu.html" class="toplevel">おすすめ<br />
+                <span>Reccomendation</span></a></li>
+              
+                <li><a href="edit.html" class="toplevel">編集<br />
+                <span>Edit</span></a></li>
+      
+                <li><a href="pointuse.html" class="toplevel">ポイント<br />
+                  <span>Point</span></a></li>
+                
+              
+                  <li><strong>検索<br />
+                    <span>Search</span></strong></li>
+                
+             
+
+             
+              <li><a href="{% url 'home:top' %}" class="toplevel">ログアウト</br>
+                <span>Logout</a></li>
+                
+              </li>
+      
+              
+            </ul>
+          </div>
+        </div>
+    
+    <h1>室ナビ！</h1>
+  
+    <div id="main">
+        <div id="pankuzu"><a href="index.html">トップページ</a>　＞　<strong>検索</strong></div>
+        <h2>検索<span>Search</span></h2>
+        <!--content start-->
+        <div id="content">
+          
+          <p>検索機能です。<br />
+            お探しの店舗を見つけるのにご活用ください</p>
+          <h3>検索<span>Shop Search</span></h3>
+          <div class="box_out">
+            <div class="box_in">
+              <dl class="dl_link">
+            
+                <!--<dt><a href="#">リンク先サイト名</a></dt>
+                <dd>リンク先サイトのサンプル解説です。任意の説明文を入れてお使いください。リンク先サイトのサンプル解説です。任意の説明文を入れてお使いください。リンク先サイトのサンプル解説です。任意の説明文を入れてお使いください。</dd>-->
+              </dl>
+              <dl class="dl_link">
+                {% block content %}
+                {% endblock %}
+                
+              </dl>
+              <dl class="dl_link">
+                
+              </dl>
+            </div>
+          </div>
+          <div class="to_top"><a href="#base">{% load static %}<img src="{% static 'img/to_top.gif'%}" alt="ページトップへ戻る" /></a></div>
+          <h3>その他<span>Etc</span></h3>
+          <div class="box_out">
+            <div class="box_in">
+              <dl class="dl_link">
+              </dl>
+              <dl class="dl_link">
+              </dl>
+              <dl class="dl_link">
+              </dl>
+            </div>
+          </div>
+          <div class="to_top"><a href="#base">{% load static %}<img src="{% static 'img/to_top.gif'%}" alt="ページトップへ戻る" /></a></div>
+        </div>
+        <!--/content end-->
+        <!--side start-->
+        <div id="side">
+          <div class="side_box">
+            <div class="side_btn"><a href="contact.html">{% load static %}<img src="{% static 'img/side_btn_df.jpg'%}" alt="お問い合わせ・ご予約はコチラ" /></a></div>
+          </div>
+          <h3>SITE MENU</h3>
+          <div class="side_box">
+            <div class="side_inbox">
+              <ul>
+                <li><a href="index2.html">トップページ<br />
+                  <span>Home</span></a></li>
+                <li><a href="menu.html">おすすめ<br />
+                  <span>Reccomendation</span></a></li>
+                
+                <li><a href="edit.html">編集<br />
+                  <span>Edit</span></a></li>
+                
+                  <li><a href="pointuse.html">ポイント<br />
+                  <span>Point</span></a></li>
+                
+                <li><a href="{% url 'home:top' %}">ログアウト<br />
+                  <span>logout</span></a>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+          <div class="side_box">
+            <h3>NEWS</h3>
+            <div class="side_inbox">
+              
+              <p><a href="#">今年流行の最新メニューを追加いたしました！</a><span class="chui">NEW!</span></p>
+              <p><a href="#">お得なキャンペーン実施中です！</a></p>
+            </div>
+            <div class="side_prbox">
+    <!--　削除禁止【ＰＲ枠】ここから　-->
+    <!--prno.130321ver2.01set016-->
+    Design by <a href="http://www.megapx.com/" target="_blank">Megapx</a><br />
+    Template by <a href="http://www.s-hoshino.com/" target="_blank">s-hoshino.com</a>
+    <!--　/削除禁止【ＰＲ枠】ここまで　-->
+            </div>
+          </div>
+        </div>
+        <!--/side end-->
+      </div>
+    <div id="foot_base">
+        <div id="foot_base">
+            <div id="foot">
+              <ul id="f_ul01">
+                <li><a href="index2.html">トップページ</a></li>
+                <li><a href="menu.html">おすすめ</a></li>
+                
+                <li><a href="edit.html">編集</a></li>
+                <li><a href="pointuse.html">ポイント</a></li>
+               
+                <li><a href="{% url 'home:top' %}">ログアウト</a></li>
+              </ul>
+              
+              </ul>
+              <div id="f_logo">室ナビ！</div>
+              <p>〒050-0071　北海道室蘭市水元町27-1<br />
+                TEL:0143-46-5073</p>
+            </div>
+              <address>
+             
+            </address>
+            </div>
+</body>
+</html>
